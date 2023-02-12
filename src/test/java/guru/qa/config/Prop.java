@@ -28,31 +28,31 @@ public class Prop {
 
     public interface PropInterface extends Config {
 
-        @Key("web.browserName")
+        @Key("webBrowserName")
         String getBrowserName();
 
-        @Key("web.browserVersion")
+        @Key("webBrowserVersion")
         String getBrowserVersion();
 
-        @Key("web.baseUrl")
+        @Key("webBaseUrl")
         String getBaseUrl();
 
-        @Key("web.browserSize")
+        @Key("webBrowserSize")
         String getBrowserSize();
 
-        @Key("web.isRemote")
+        @Key("webIsRemote")
         Boolean isRemote();
 
-        @Key("web.remoteUrl")
+        @Key("webRemoteUrl")
         String getRemoteUrl();
 
-        @Key("web.pageLoadTimeout")
+        @Key("webPageLoadTimeout")
         Long getPageLoadTimeout();
 
-        @Key("web.timeout")
+        @Key("webTimeout")
         Long getTimeout();
 
-        @Key("web.headless")
+        @Key("webIsHeadless")
         Boolean isHeadless();
     }
 }
