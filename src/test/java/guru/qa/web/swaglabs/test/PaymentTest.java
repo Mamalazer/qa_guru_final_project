@@ -15,7 +15,7 @@ import static java.util.Collections.singletonList;
 
 @Feature("SwagLabs")
 @Story("Оплата заказа")
-@Tags({@Tag("Payment"), @Tag("Smoke")})
+@Tags({@Tag("Payment"), @Tag("Smoke"), @Tag("Web"), @Tag("SwagLabs")})
 public class PaymentTest extends BaseTest {
 
     @BeforeEach

@@ -54,7 +54,8 @@ dependencies {
             "org.aeonbits.owner:owner:1.0.12",
             "io.rest-assured:rest-assured:5.3.0",
             "io.qameta.allure:allure-rest-assured:${allureVersion}",
-            "com.fasterxml.jackson.core:jackson-databind:2.14.1"
+            "com.fasterxml.jackson.core:jackson-databind:2.14.1",
+            "com.github.javafaker:javafaker:1.0.2",
     )
 
     testRuntimeOnly(
@@ -72,7 +73,11 @@ dependencies {
 
 test {
     systemProperties(System.getProperties())
-    useJUnitPlatform()
+    useJUnitPlatform {
+        if (System.getProperty("tag") != null && !System.getProperty("tag").isEmpty()) {
+            includeTags System.getProperty("tag")
+        }
+    }
 
     if (System.getProperty("threads") != null) {
         systemProperties += [

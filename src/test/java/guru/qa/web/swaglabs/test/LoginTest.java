@@ -16,7 +16,7 @@ import static io.qameta.allure.SeverityLevel.BLOCKER;
 
 @Feature("SwagLabs")
 @Story("Авторизация")
-@Tags({@Tag("Auth")})
+@Tags({@Tag("Auth"), @Tag("Web"), @Tag("SwagLabs")})
 public class LoginTest extends BaseTest {
 
     @Test

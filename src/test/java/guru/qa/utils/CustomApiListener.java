@@ -2,7 +2,6 @@ package guru.qa.utils;
 
 import io.qameta.allure.restassured.AllureRestAssured;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 
 public class CustomApiListener {
@@ -14,9 +13,8 @@ public class CustomApiListener {
         return FILTER;
     }
 
-    public static RequestSpecification jsonRequest() {
+    public static RequestSpecification allureRequest() {
         return new RequestSpecBuilder()
-                .setContentType(ContentType.JSON)
                 .addFilter(withCustomTemplates())
                 .build();
     }

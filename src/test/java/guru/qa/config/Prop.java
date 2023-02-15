@@ -54,5 +54,11 @@ public class Prop {
 
         @Key("webIsHeadless")
         Boolean isHeadless();
+
+        @Key("dummyToken")
+        String getDummyToken();
+
+        @Key("dummyBaseUrl")
+        String getDummyBaseUrl();
     }
 }

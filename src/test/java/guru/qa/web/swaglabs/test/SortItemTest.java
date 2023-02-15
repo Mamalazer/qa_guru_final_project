@@ -14,7 +14,7 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 
 @Feature("SwagLabs")
 @Story("Сортировка товаров")
-@Tags({@Tag("Sort")})
+@Tags({@Tag("Sort"), @Tag("Web"), @Tag("SwagLabs")})
 public class SortItemTest extends BaseTest{
 
     @BeforeEach

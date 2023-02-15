@@ -17,7 +17,7 @@ import static io.qameta.allure.SeverityLevel.BLOCKER;
 
 @Feature("SwagLabs")
 @Story("Корзина")
-@Tags({@Tag("Basket")})
+@Tags({@Tag("Basket"), @Tag("Web"), @Tag("SwagLabs")})
 public class BasketTest extends BaseTest {
 
     @BeforeEach
