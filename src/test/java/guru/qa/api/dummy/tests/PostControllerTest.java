@@ -127,11 +127,9 @@ public class PostControllerTest {
         Post newPost = createNewPost(postCreate);
         GeneralPostList listOfPosts = getListOfPostsByTag(newPost.getTags().get(0));
 
-        assertEquals(
-                Long.valueOf(listOfPosts.getTotal()),
+        assertTrue(
                 listOfPosts.getData().stream()
-                        .filter(post -> post.getTags().contains(newPost.getTags().get(0)))
-                        .count()
+                        .allMatch(post -> post.getTags().contains(newPost.getTags().get(0)))
         );
     }
 }
