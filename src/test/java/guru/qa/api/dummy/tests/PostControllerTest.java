@@ -114,4 +114,24 @@ public class PostControllerTest {
                     .allMatch(id -> id.equals(newPost1.getId()) || id.equals(newPost2.getId()))
         );
     }
+
+    @Test
+    @DisplayName("Получение постов по тегу")
+    @Owner("d.kuznetsov")
+    @Severity(BLOCKER)
+    public void postByTag() {
+        UserFull user = userGenerator();
+
+        UserFull createdUser = createUser(user);
+        PostCreate postCreate = generatePost(createdUser.getId());
+        Post newPost = createNewPost(postCreate);
+        GeneralPostList listOfPosts = getListOfPostsByTag(newPost.getTags().get(0));
+
+        assertEquals(
+                Long.valueOf(listOfPosts.getTotal()),
+                listOfPosts.getData().stream()
+                        .filter(post -> post.getTags().contains(newPost.getTags().get(0)))
+                        .count()
+        );
+    }
 }

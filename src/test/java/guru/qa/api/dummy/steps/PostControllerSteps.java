@@ -97,4 +97,15 @@ public class PostControllerSteps {
                 .statusCode(200)
                 .extract().as(GeneralPostList.class);
     }
+
+    @Step("Получение списка постов по тегу = {tag}")
+    public static GeneralPostList getListOfPostsByTag(String tag) {
+        return given()
+                .spec(dummyRequest())
+                .basePath("/tag/" + tag + "/post")
+                .get()
+                .then().log().all()
+                .statusCode(200)
+                .extract().as(GeneralPostList.class);
+    }
 }

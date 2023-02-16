@@ -1,4 +1,4 @@
-package guru.qa.api.dummy.models;
+package guru.qa.api.dummy.models.comment;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -11,9 +11,9 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class GeneralList {
+public class GeneralCommentList {
 
-    private List<?> data;
+    private List<CommentPreview> data;
     private Integer total;
     private Integer page;
     private Integer limit;
