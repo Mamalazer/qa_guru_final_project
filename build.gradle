@@ -79,7 +79,7 @@ test {
         }
     }
 
-    if (System.getProperty("threads") != null) {
+    if (System.getProperty("threads") != null && !System.getProperty("threads").isEmpty()) {
         systemProperties += [
                 'junit.jupiter.execution.parallel.enabled'                 : true,
                 'junit.jupiter.execution.parallel.mode.default'            : 'concurrent',
