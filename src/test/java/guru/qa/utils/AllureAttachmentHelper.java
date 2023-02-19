@@ -2,6 +2,7 @@ package guru.qa.utils;
 
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
+import guru.qa.utils.browserstack.models.BrowserStackSessionInfo;
 import io.qameta.allure.Attachment;
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.OutputType;
@@ -12,6 +13,7 @@ import java.nio.charset.StandardCharsets;
 
 import static com.codeborne.selenide.Selenide.sessionId;
 import static guru.qa.config.Prop.PROP;
+import static guru.qa.utils.browserstack.BrowserStackHelper.getBrowserStackLog;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
 @Slf4j(topic = "AllureAttachmentHelper")
@@ -62,5 +64,30 @@ public class AllureAttachmentHelper {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Attachment(value = "Video", type = "text/html", fileExtension = ".html")
+    public static String getBrowserStackVideo(BrowserStackSessionInfo sessionInfo) {
+        return "<html><body><video width='100%' height='100%' controls autoplay><source src='"
+                + sessionInfo.getAutomationSession().getVideoUrl()
+                + "' type='video/mp4'></video></body></html>";
+    }
+
+    @Attachment(value = "Logs", type = "text/plain")
+    public static byte[] logs(BrowserStackSessionInfo sessionInfo) {
+        return getBrowserStackLog(sessionInfo.getAutomationSession().getLogs())
+                .getBytes(StandardCharsets.UTF_8);
+    }
+
+    @Attachment(value = "Private link to the test run", type = "text/html", fileExtension = ".html")
+    public static String privateLink(BrowserStackSessionInfo sessionInfo) {
+        String browserUrl = sessionInfo.getAutomationSession().getBrowserUrl();
+        return "<html><body><a href='" + browserUrl + "' target='_blank'>Private link to the test run</a></body></html>";
+    }
+
+    @Attachment(value = "Public link to the test run", type = "text/html", fileExtension = ".html")
+    public static String publicLink(BrowserStackSessionInfo sessionInfo) {
+        String publicUrl = sessionInfo.getAutomationSession().getPublicUrl();
+        return "<html><body><a href='" + publicUrl + "' target='_blank'>Public link to the test run</a></body></html>";
     }
 }

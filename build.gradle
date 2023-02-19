@@ -1,15 +1,16 @@
 plugins {
     id 'java-library'
-    id 'io.qameta.allure' version '2.10.0'
+    id 'io.qameta.allure' version '2.11.2'
 }
 
 group 'org.example'
 version '1.0-SNAPSHOT'
 
 ext {
-    allureVersion = '2.20.0'
-    junitVersion = '5.9.0'
-    selenideVersion = '6.10.3'
+    allureVersion = '2.20.1'
+    junitVersion = '5.9.2'
+    selenideVersion = '6.11.2'
+    lombok = '1.18.24'
 }
 
 allure {
@@ -56,6 +57,8 @@ dependencies {
             "io.qameta.allure:allure-rest-assured:${allureVersion}",
             "com.fasterxml.jackson.core:jackson-databind:2.14.1",
             "com.github.javafaker:javafaker:1.0.2",
+            "com.codeborne:selenide-appium:2.5.2",
+            "io.appium:java-client:8.3.0"
     )
 
     testRuntimeOnly(
@@ -63,11 +66,11 @@ dependencies {
     )
 
     testCompileOnly (
-            "org.projectlombok:lombok:1.18.24"
+            "org.projectlombok:lombok:${lombok}"
     )
 
     testAnnotationProcessor (
-            "org.projectlombok:lombok:1.18.24"
+            "org.projectlombok:lombok:${lombok}"
     )
 }
 

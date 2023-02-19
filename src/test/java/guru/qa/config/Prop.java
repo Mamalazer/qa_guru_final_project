@@ -28,6 +28,7 @@ public class Prop {
 
     public interface PropInterface extends Config {
 
+        // Web tests properties
         @Key("webBrowserName")
         String getBrowserName();
 
@@ -55,10 +56,51 @@ public class Prop {
         @Key("webIsHeadless")
         Boolean isHeadless();
 
+        // Api tests properties
         @Key("dummyToken")
         String getDummyToken();
 
         @Key("dummyBaseUrl")
         String getDummyBaseUrl();
+
+        // Mobile tests properties
+        @Key("browserstack.user")
+        String getBrowserStackUser();
+
+        @Key("browserstack.password")
+        String getBrowserStackPassword();
+
+        @Key("androidVersion")
+        String getAndroidversion();
+
+        @Key("androidDevice")
+        String getAndroidDevice();
+
+        @Key("androidApp")
+        String getAndroidApp();
+
+        @Key("buildName")
+        String getBuildName();
+
+        @Key("mobilePlatform")
+        String getMobilePlatform();
+
+        @Key("local.url")
+        String getLocalUrl();
+
+        @Key("android.local.version")
+        String getLocalAndroidVersion();
+
+        @Key("android.local.device")
+        String getLocalAndroidDevice();
+
+        @Key("android.local.app.path")
+        String getLocalAndroidAppPath();
+
+        @Key("appPackage")
+        String getLocalAndroidAppPackage();
+
+        @Key("appActivity")
+        String getLocalAndroidAppActivity();
     }
 }
