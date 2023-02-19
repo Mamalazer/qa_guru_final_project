@@ -1,4 +1,4 @@
-package guru.qa.mobile.ozone.drivers;
+package guru.qa.mobile.ozon.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
 import io.appium.java_client.android.AndroidDriver;

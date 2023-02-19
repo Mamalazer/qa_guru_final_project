@@ -1,4 +1,4 @@
-package guru.qa.mobile.ozone.tests;
+package guru.qa.mobile.ozon.tests;
 
 import org.junit.jupiter.api.Test;
 

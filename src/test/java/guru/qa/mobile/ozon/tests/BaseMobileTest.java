@@ -1,11 +1,11 @@
-package guru.qa.mobile.ozone.tests;
+package guru.qa.mobile.ozon.tests;
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.appium.SelenideAppium;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import guru.qa.mobile.ozone.drivers.BrowserStackAndroidDriver;
-import guru.qa.mobile.ozone.drivers.LocalAndroidDriver;
+import guru.qa.mobile.ozon.drivers.BrowserStackAndroidDriver;
+import guru.qa.mobile.ozon.drivers.LocalAndroidDriver;
 import guru.qa.utils.browserstack.models.BrowserStackSessionInfo;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
