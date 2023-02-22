@@ -29,7 +29,7 @@ public class BaseMobileTest {
 
     @BeforeEach
     void openBrowser() {
-        if (PROP.getMobilePlatform().equals("android")) {
+        if (PROP.getMobilePlatform().equals("browserstack")) {
             Configuration.browser = BrowserStackAndroidDriver.class.getName();
         } else {
             Configuration.browser = LocalAndroidDriver.class.getName();
@@ -43,7 +43,7 @@ public class BaseMobileTest {
         screenshotAs("Last screenshot");
         pageSource();
         closeWebDriver();
-        if (!PROP.getMobilePlatform().equals("local")) {
+        if (PROP.getMobilePlatform().equals("browserstack")) {
             BrowserStackSessionInfo sessionInfo = getSessionInfo(sessionId);
             getBrowserStackVideo(sessionInfo);
             logs(sessionInfo);

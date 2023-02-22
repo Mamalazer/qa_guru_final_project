@@ -18,7 +18,7 @@ import static io.qameta.allure.SeverityLevel.BLOCKER;
 public class BasketTest extends BaseMobileTest{
 
     @Test
-    @DisplayName("Проверка страницы 'Скидки'")
+    @DisplayName("Проверка страницы 'Корзина'")
     @Owner("d.kuznetsov")
     @Severity(BLOCKER)
     public void basketPage() {
