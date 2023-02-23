@@ -32,6 +32,7 @@ public class BasketTest extends BaseMobileTest{
     @Severity(BLOCKER)
     public void addItem() {
         new MainPage()
+                .changeRegion("Пенза")
                 .search("iphone 12")
                 .addFirstItemToBasket()
                 .openBasketPage()

@@ -23,6 +23,7 @@ public class DiscountTest extends BaseMobileTest {
     @Severity(NORMAL)
     public void checkDiscount() {
         new MainPage()
+                .changeRegion("Пенза")
                 .openDiscountPage();
     }
 }

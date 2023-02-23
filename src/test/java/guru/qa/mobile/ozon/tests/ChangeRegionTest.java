@@ -13,22 +13,19 @@ import org.junit.jupiter.api.Test;
 import static io.qameta.allure.SeverityLevel.BLOCKER;
 
 @Feature("Ozon")
-@Story("Поиск")
-@Tags({@Tag("Search"), @Tag("Mobile"), @Tag("Ozon")})
-public class SearchTest extends BaseMobileTest {
+@Story("Выбор региона")
+@Tags({@Tag("ChangeRegion"), @Tag("Mobile"), @Tag("Ozon")})
+public class ChangeRegionTest extends BaseMobileTest {
 
     @Test
-    @DisplayName("Поиск товара и добавление в корзину")
+    @DisplayName("Изменение региона доставки")
     @Owner("d.kuznetsov")
     @Severity(BLOCKER)
-    public void searchAndAdd() {
+    public void changeRegion() {
+        String region = "Москва";
+
         new MainPage()
-                .changeRegion("Пенза")
-                .search("nesquik какао")
-                .checkResultsOfSearch()
-                .openFirstItem()
-                .addItemToBasket()
-                .openBasketPage()
-                .checkItemExist();
+                .changeRegion(region)
+                .checkActualRegion(region);
     }
 }
