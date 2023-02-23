@@ -98,7 +98,7 @@ gradle clean test
 -Dtag= 
 -Dthreads= 
 -DwebIsRemote=true 
--DwebRemoteUrl=https://user1:1234@selenoid.autotests.cloud 
+-DwebRemoteUrl=https://selenoid.cloud 
 -DwebBaseUrl=https://www.saucedemo.com 
 -DwebBrowserSize=1920x1080 
 -DwebBrowserName=chrome 
