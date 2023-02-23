@@ -16,11 +16,25 @@
 > 
 > ➠ [Web приложение Saucedemo](#web-приложение-saucedemo)
 >
-> ➠ [Покрытый функционал](#покрытый-функционал)
+> ➠ [Покрытый функционал web приложения Saucedemo](#покрытый-функционал-web-приложения-saucedemo)
 >
-> ➠ [Технологический стек](#технологический-стек)
+> ➠ [Технологический стек UI](#технологический-стек-ui)
 > 
 > ➠ [Пример запуска теста в Selenoid](#-пример-запуска-теста-в-selenoid)
+> 
+> ➠ [Api сервис Dummy](#api-сервис-dummy)
+> 
+> ➠ [Покрытый функционал api сервиса Dummy](#покрытый-функционал-api-сервиса-dummy)
+> 
+> ➠ [Технологический стек API](#технологический-стек-api)
+> 
+> ➠ [Мобильное приложение Ozon](#мобильное-приложение-ozon)
+>
+> ➠ [Покрытый функционал мобильного приложения Ozon](#покрытый-функционал-мобильного-приложения-ozon)
+>
+> ➠ [Технологический стек Mobile](#технологический-стек-mobile)
+>
+> ➠ [Пример запуска теста в Browserstack](#-пример-запуска-теста-в-browserstack)
  
 ##  Общая информация о проекте
 
@@ -160,7 +174,7 @@ remoteUrl=https://selenoid.autotests.cloud
 
 ##  Web приложение Saucedemo
 
-###  Покрытый функционал
+###  Покрытый функционал web приложения Saucedemo
 
 > Разработаны автотесты на <code>UI</code>.
 ### UI
@@ -170,7 +184,7 @@ remoteUrl=https://selenoid.autotests.cloud
 - [x] Добавление товаров в корзину
 - [x] Оформление и оплата заказа
 
-### Технологический стек
+### Технологический стек UI
 
 <p align="center">
 <img width="6%" title="IntelliJ IDEA" src="readme_design/logo/Intelij_IDEA.svg">
@@ -178,7 +192,7 @@ remoteUrl=https://selenoid.autotests.cloud
 <img width="6%" title="Selenide" src="readme_design/logo/Selenide.svg">
 <img width="6%" title="Selenoid" src="readme_design/logo/Selenoid.svg">
 <img width="6%" title="Allure Report" src="readme_design/logo/Allure_Report.svg">
-<img width="6%" title="Allure Report" src="readme_design/logo/Allure_Test_Ops.svg">
+<img width="6%" title="Allure Test Ops" src="readme_design/logo/Allure_Test_Ops.svg">
 <img width="6%" title="Gradle" src="readme_design/logo/Gradle.svg">
 <img width="6%" title="JUnit5" src="readme_design/logo/JUnit5.svg">
 <img width="6%" title="GitHub" src="readme_design/logo/GitHub.svg">
@@ -206,4 +220,111 @@ remoteUrl=https://selenoid.autotests.cloud
 
 <p align="center">
 <img title="Selenoid_gif" src="readme_design/gifs/Selenoid.gif">
+</p>
+
+##  Api сервис Dummy
+
+###  Покрытый функционал api сервиса Dummy
+
+> Разработаны автотесты на <code>Api сервис</code>.
+### Api
+
+- [x] Получение списка пользователей
+- [x] Создание нового пользователя
+- [x] Изменение пользователя
+- [x] Удаление пользователя
+- [x] Получение списка постов
+- [x] Создание нового поста
+- [x] Изменение поста
+- [x] Удаление поста
+- [x] Проверка всех постов пользователя
+- [x] Получение постов по тегу
+- [x] Получение списка коментов
+- [x] Добавление комента к посту
+- [x] Получение списка коментов пользователя
+- [x] Удаление комента
+
+### Технологический стек API
+
+<p align="center">
+<img width="6%" title="IntelliJ IDEA" src="readme_design/logo/Intelij_IDEA.svg">
+<img width="6%" title="Java" src="readme_design/logo/Java.svg">
+<img width="6%" title="Rest Assured" src="readme_design/logo/Rest_Assured.png">
+<img width="6%" title="Allure Report" src="readme_design/logo/Allure_Report.svg">
+<img width="6%" title="Allure Test Ops" src="readme_design/logo/Allure_Test_Ops.svg">
+<img width="6%" title="Gradle" src="readme_design/logo/Gradle.svg">
+<img width="6%" title="JUnit5" src="readme_design/logo/JUnit5.svg">
+<img width="6%" title="GitHub" src="readme_design/logo/GitHub.svg">
+<img width="6%" title="Jenkins" src="readme_design/logo/Jenkins.svg">
+<img width="6%" title="Telegram" src="readme_design/logo/Telegram.svg">
+</p>
+
+### В данном подпроекте автотесты написаны на <code>Java</code> с использованием <code>Rest Assured</code> для Api-тестов.
+>
+> <code>Rest Assured</code> выполняет роль обёртки над http клиентом.
+>
+> <code>Allure Report</code> формирует отчет о запуске тестов.
+>
+> Для автоматизированной сборки проекта используется <code>Gradle</code>.
+>
+> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
+>
+> <code>Jenkins</code> выполняет запуск тестов.
+>
+> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
+
+## Мобильное приложение Ozon
+
+### Покрытый функционал мобильного приложения Ozon
+
+> Разработаны автотесты для мобильного приложения Ozon.
+
+- [x] Проверка страницы 'Корзина'
+- [x] Добавление товара в корзину
+- [x] Проверка категорий на странице каталога
+- [x] Изменение региона доставки
+- [x] Проверка страницы 'Скидки'
+- [x] Поиск товара и добавление в корзину
+
+### Технологический стек Mobile
+
+<p align="center">
+<img width="6%" title="IntelliJ IDEA" src="readme_design/logo/Intelij_IDEA.svg">
+<img width="6%" title="Java" src="readme_design/logo/Java.svg">
+<img width="6%" title="Selenide" src="readme_design/logo/Selenide.svg">
+<img width="6%" title="Android Studio" src="readme_design/logo/androidstudio.svg">
+<img width="6%" title="Appium" src="readme_design/logo/appium.svg">
+<img width="6%" title="Appium Inspector" src="readme_design/logo/appium_inspector.png">
+<img width="6%" title="Browserstack" src="readme_design/logo/browserstack.svg">
+<img width="6%" title="Allure Report" src="readme_design/logo/Allure_Report.svg">
+<img width="6%" title="Allure Test Ops" src="readme_design/logo/Allure_Test_Ops.svg">
+<img width="6%" title="Gradle" src="readme_design/logo/Gradle.svg">
+<img width="6%" title="JUnit5" src="readme_design/logo/JUnit5.svg">
+<img width="6%" title="GitHub" src="readme_design/logo/GitHub.svg">
+<img width="6%" title="Jenkins" src="readme_design/logo/Jenkins.svg">
+<img width="6%" title="Telegram" src="readme_design/logo/Telegram.svg">
+</p>
+
+### В данном подпроекте автотесты написаны на <code>Java</code> с использованием <code>Selenide и Appium</code>.
+>
+> <code>Selenide и Appium</code> используются для управления мобильным устройством с помощью веб драйвера.
+>
+> Тесты можно запускать как локально(с помощью Android studio и эмулятора мобильного устройства), так и с помощью сервиса Browserstack, предоставляющего доступ к ферме с реальными мобильными устройствами
+> 
+> <code>Allure Report</code> формирует отчет о запуске тестов.
+>
+> Для автоматизированной сборки проекта используется <code>Gradle</code>.
+>
+> В качестве библиотеки для модульного тестирования используется <code>JUnit 5</code>.
+>
+> <code>Jenkins</code> выполняет запуск тестов.
+>
+> После завершения прогона отправляются уведомления с помощью бота в <code>Telegram</code>.
+
+## <img width="4%" title="BrowserStack" src="readme_design/logo/browserstack.svg"> Пример запуска теста в Browserstack
+
+> К каждому тесту в отчете прилагается видео и различные логи. Одно из таких видео представлено ниже.
+
+<p align="center">
+<img title="Browserstack_gif" src="readme_design/gifs/Browserstack_gif.gif">
 </p>
