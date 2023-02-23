@@ -25,7 +25,7 @@ import static io.qameta.allure.SeverityLevel.NORMAL;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @Feature("Dummy")
-@Story("Манипуляции с постами")
+@Story("Манипуляции с коментами")
 @Tags({@Tag("CommentController"), @Tag("Api"), @Tag("Dummy")})
 public class CommentControllerTest {
 
